@@ -1,0 +1,489 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ html{
+     display: flex;
+     font-family: 'Montserrat', sans-serif;
+     background-color: lightgray; 
+
+ }
+ 
+ img {
+    height: 20rem;
+    width: 18rem;
+   object-fit: contain;  
+ }
+
+ h1{
+    font-size: 3rem; 
+}
+
+ div.all_items{
+     display: flex; 
+     flex-direction: column; 
+ }
+
+ div.item_div{
+     display: flex; 
+     flex-direction: row; 
+ }
+
+ body {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    margin: 0; 
+}
+
+.row img{
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover; 
+    opacity: 0.3; 
+}
+
+.welcome{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1513373319109-eb154073eb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3; 
+}
+
+.items{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    /* background-image: url('https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.items_text{
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+}
+
+.category_browse_title{
+    width: 100%;
+    height: 5%; 
+    text-align: center; 
+}
+
+.category_browse{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;  
+    width: 100%;
+    height: 45%; 
+}
+
+.category_box{
+    width: 15%; 
+    border-style: solid; 
+    border-color: gray; 
+    box-shadow: 1px 2px 4px gray; 
+    border-radius: 0.5rem; 
+    margin: 1rem; 
+    padding: 0.5rem;  
+}
+
+.category_box a{
+    text-decoration: none; 
+    color: black;
+}
+
+.category_box a:hover{
+    color: darkred; 
+}
+
+.style_browse_title{
+    width: 100%;
+    height: 5%; 
+    text-align: center; 
+}
+
+.style_browse{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;  
+    width: 100%;
+    height: 45%; 
+    align-content: center; 
+    justify-content: center; 
+}
+
+.style_box{
+    width: 20%; 
+    border-style: solid; 
+    border-color: gray; 
+    box-shadow: 1px 2px 4px gray; 
+    border-radius: 0.5rem; 
+    margin: 1rem; 
+    padding: 0.5rem;  
+}
+
+.style_box a {
+    text-decoration: none; 
+    color: black; 
+}
+
+.style_box a:hover{
+    color: darkred; 
+}
+
+.new_account{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1511389290465-d11bafd4c1df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3; 
+    z-index: -1; 
+}
+
+.new_account_text{
+    z-index: 2;
+    margin-left: 3%;
+    margin-top: 3%; 
+}
+
+.item_text{
+    z-index: 2;
+}
+
+.user_text{
+    margin-left: 3%;
+    margin-top: 3%; 
+}
+
+.outfits{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1493146146946-e907f69cdf23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1; 
+}
+
+.create_outfit {
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1298&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1; 
+}
+
+.outfit_show{
+    align-content: center; 
+    position: fixed; 
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1532646195885-5c09e5c45934?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1444&q=80'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: -1;   
+}
+
+.outfit_show_header{
+    text-align: center; 
+    z-index: 2;
+}
+
+
+.outfit_show_text{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    margin-left: 3%;
+    margin-top: 3%; 
+    z-index: 2;
+}
+
+.all_items{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;    
+}
+
+.image img{
+    opacity: 1; 
+}
+
+.create_outfit_text{
+    margin-left: 3%;
+    margin-top: 3%; 
+    z-index: 2;
+}
+
+.create_outfit_text button {
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: black; 
+    margin-left: 5rem; 
+}
+
+.outfit_text{
+    margin-left: 3%;
+    margin-top: 2%; 
+    z-index: 2;
+}
+
+.welcome_content {
+    margin-top: 12%; 
+    margin-left: 5%; 
+    position: absolute; 
+    z-index: 2;
+}
+
+.login_ask{
+    margin-top: 6%; 
+}
+
+.buttonTo{
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: black; 
+    margin-left: 5rem;  
+    box-shadow: 1px 2px 4px gray; 
+    border-radius: 0.5rem; 
+}
+
+.buttonTo:hover {
+    font-size: 1.4rem; 
+    cursor: pointer;
+}
+/* 
+ .ui_content_main{
+    padding: 0;
+    margin: 0; 
+ } */
+
+ .buttons{
+     display: flex;
+     flex-direction: row; 
+     align-items: center; 
+     justify-content: center;
+ }
+
+ .nav {
+     display: flex;
+     flex-direction: row;
+     align-content: space-between; 
+     width: 100%; 
+     height: 1.5rem; 
+     z-index: 3;
+     background-color: darkgray; 
+     padding: 1%; 
+     /* position: fixed;   */
+ }
+
+ .nav a {
+     text-decoration: none; 
+     color: black; 
+ }
+
+ .nav a:hover{
+     color: darkred; 
+ }
+
+ .first_40{
+     display: flex;
+     flex-direction: row;
+     width: 40%; 
+ }
+
+ .home_link{
+    width: 25%; 
+ }
+
+ .profile_link{
+    width: 25%; 
+ }
+
+ .items_link{
+    width: 25%; 
+ }
+
+ .outfits_link{
+    width: 25%; 
+ }
+
+ .second_40{
+     width: 40%; 
+ }
+
+ .last_20{
+     display: flex;
+
+     width: 20%; 
+
+ }
+ .login_link {
+     width: 50%
+ }
+ .profile_link {
+    width: 50%
+}
+
+.auth{
+    align-content: center; 
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    /* background-image: url('/assets/20190823_091518.jpg');  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1; 
+    z-index: -1;
+    background-attachment: fixed; 
+}
+
+.auth_content{
+    display: flex; 
+    flex-direction: row; 
+    margin-left: 5%; 
+    margin-top: 5%; 
+}
+
+.auth_photo{
+    margin-left: 8%; 
+    opacity: 0.7; 
+}
+
+ .auth_text{
+     display: flex; 
+     flex-direction: column; 
+     margin-left: 5%;
+     margin-top: 5%; 
+ }
+
+ .logged_in{
+     margin-top: 5%;
+     margin-left: 5%; 
+ }
+
+.edit_outfit_page{
+    display: flex; 
+    flex-direction: column;   
+}
+
+.edit_outfit_heading{
+    text-align: center; 
+}
+
+.edit_page_details{
+    display: flex;
+    flex-direction: row; 
+    width: 100%; 
+}
+
+.outfit_details{
+   display: flex;
+   flex-direction: column;  
+   width: 25%; 
+   margin-left: 3%; 
+   position: fixed; 
+}
+
+.all_items_shown{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 28%; 
+    width: 70%; 
+}
+
+.items_header{
+    text-align: center; 
+}
+
+.all_items_on_edit_outfit{
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap;  
+}
+
+.item_block{
+    display: flex;
+    flex-direction: column; 
+    width: 24%;
+    margin: 3%;    
+}
+
+.each_item_name{
+    text-align: center;
+}
+
+.each_item_img img{
+    width: 100%; 
+}
+
+.items_show_page {
+    display: flex;
+    flex-direction: row;
+}
+
+.item_name_to_category {
+    margin-left: 10%;
+    width: 35%;
+}
+.users_with_items_in_outfits {
+    width: 30%;
+    margin-right: 25%;
+}
+
+.analytics_page{
+    margin-left: 5%;
+}
+
+.analytics_content{
+    margin-left: 5%; 
+}
+
+#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    margin-top: 8rem;     
+  }
+
+#footer p {
+    font-size: 0.6rem; 
+}
+
+
+
+

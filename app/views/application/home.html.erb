@@ -1,0 +1,7 @@
+<div class="logged_in">
+    <h2>Welcome back, <%=current_user.first_name%>!</h2>
+
+    <p>What would you like to do?</p>
+
+    <%=link_to 'Browse Outfits', outfits_path%> | <%=link_to 'Create Outfit', new_outfit_path%> | <%=link_to 'Browse Items', items_path%>
+</div>

@@ -1,0 +1,22 @@
+    <% if flash[:notice] %>
+    <% end %>
+
+<div class ="user_text">    
+    <h3><%=@user.to_s%></h3>
+    <p><%=@user.bio%></p>
+    <p><%=@user.age%></p>
+
+    <h4>Current Outfits: </h4>
+    <ul>
+        <%@user.outfits.each do |o|%>
+            <li><%=link_to o.name, outfit_path(o)%></li>
+        <%end%>
+    </ul>
+
+    <%=link_to 'Edit Profile', edit_user_path(@user)%> | 
+    <%=link_to 'Delete Account', user_path(@user), method: :delete%> |
+    <%=link_to 'Home', home_path%> <br>
+
+    <%=link_to 'Browse All Outfits', outfits_path%> |
+    <%=link_to 'Create an Outfit', new_outfit_path%>
+</div>

@@ -1,0 +1,28 @@
+
+<div class = "items_show_page">
+    <div class = "item_name_to_category">
+        <h2><%=@item.name%></h2>
+        <h3><%=@item.brand%></h3>
+
+        <%= image_tag(@item.img_url, :alt => "landing pic") %>
+
+
+
+        <p>Item Style: <%=@item.style.name%></p>
+        <p>Item Category: <%=@item.category.name%></p>
+    </div>
+        
+    <div class = "users_with_items_in_outfits">
+        <p>Users with this item in their outfits:</p>
+
+        <ul>
+        <%uniq_users.each do |user|%>
+            <li> <%=user%> </li>
+        <%end%>
+        </ul>
+
+        <br>
+
+        <%=link_to 'All Items', items_path%>
+    <div>
+</div>

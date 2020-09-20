@@ -1,0 +1,122 @@
+<div class = "items">
+    <p></p>
+</div>
+
+<div class="items_text">
+
+    <div class="category_browse_title">
+        <h2>Browse by Category</h2>
+    </div>
+
+    <div class="category_browse">
+        
+        <div class="category_box">
+            <h3> Shoes </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.category.name == "shoes"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="category_box">
+            <h3> Shirts </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.category.name == "tops"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="category_box">
+            <h3> Pants </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.category.name == "bottoms"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="category_box">
+            <h3> Accessories </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.category.name == "accessories"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="category_box">
+            <h3> Suits </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.category.name == "suits"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="style_browse_title">
+        <h2>Browse by Style</h2>
+    </div>
+
+    <div class = "style_browse">
+
+        <div class="style_box">
+            <h3> Business </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.style.name == "business"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class = "style_box">
+            <h3> Casual </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.style.name == "casual"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="style_box">
+            <h3> Athletic </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.style.name == "athletic"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+        <div class="style_box">
+            <h3> Formal </h3>
+            <ul>
+            <% @items.each do |item|%>
+                <%if item.style.name == "formal"%>
+                    <li> <%= link_to item.name, item_path(item) %> </li>
+                <%end%>
+            <%end%>
+            </ul>
+        </div>
+
+    </div >
+
+</div>

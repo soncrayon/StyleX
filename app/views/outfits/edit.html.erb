@@ -1,0 +1,54 @@
+
+<div class = "edit_outfit_page">
+    
+    <div class = "edit_outfit_heading">
+        <h2>Edit Your Outfit</h2>
+    </div>
+
+    <div class = "edit_page_details">
+        <div class = "outfit_details">
+            <div class = "outfit_name">
+                <h3> Outfit Name:   <%=@outfit.name.capitalize%> </h3>
+            </div>
+
+            <div class = "outfit_items">
+                <ul>
+                <%@outfit.items.each do |item|%>
+                    <li><%=item.name%></li>
+                <%end%>
+                </ul>
+            </div>
+
+            <div class = "add_item_to_outfit_bar">
+                <h2>Add Item to Outfit</h2>
+                <%=form_for @outfit do |f|%>
+                <%=f.collection_select(:id, @items, :id, :name)%>
+                <%=f.submit%>
+                <%end%>
+            </div>
+            <br>
+            <%=link_to "View your Outfit", outfit_path(@outfit)%>
+        </div>
+
+        
+
+
+        <div class = "all_items_shown">
+            <div class = "items_header">
+                <h3> Items </h3>
+            </div>
+            <div class = "all_items_on_edit_outfit">
+                <% @items.each do |item| %>
+                    <div class = "item_block">
+                        <div class = "each_item_name">
+                            <h5><%=item.name%><h5>
+                        </div>
+                        <div class = "each_item_img">
+                            <%=image_tag(item.img_url, :alt => "Item Picture")%>
+                        </div>
+                    </div>
+                <%end%>
+            </div>
+        </div>
+    </div>
+</div>

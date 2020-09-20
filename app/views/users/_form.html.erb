@@ -1,0 +1,17 @@
+
+<%=form_for @user do |f|%>
+    <%=f.label 'First Name: '%>
+    <%=f.text_field :first_name%><br><br>
+    <%=f.label 'Last Name: '%>
+    <%=f.text_field :last_name%><br><br>
+    <%=f.label 'Age: '%>
+    <%=f.number_field :age%><br><br>
+    <%=f.label 'Bio: '%>
+    <%=f.text_area :bio%><br><br>
+    <%=f.label 'Username: '%>
+    <%=f.text_field :username%><br><br>
+    <%=f.label 'Password: '%>
+    <%=f.password_field :password%><br><br>
+    <%=f.submit%>
+<%end%>
+<br><br>

@@ -1,0 +1,18 @@
+<%if @outfit.errors.present?%>
+
+    <p>  -  Outfit must have a name! </p>
+<%end%>
+
+<div class="create_outfit">
+    <p></p>
+</div>
+
+<div class="create_outfit_text">
+    <h2>Nice.  You're on your way.</h2>
+    <h2>Please provide a name for your new outfit to continue.</h2>
+
+    <%=form_for @outfit do |f|%>
+    <%=f.text_field :name%>
+    <%=f.submit%>
+    <%end%>
+</div>

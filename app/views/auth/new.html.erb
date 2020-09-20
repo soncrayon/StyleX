@@ -1,0 +1,31 @@
+<div class="auth">
+    <p></p>
+</div>
+
+<div class = "auth_content">
+    <div class="auth_text">
+
+        <div class="login_text">
+        <p>Please enter your username and password</p>
+        </div>
+
+        <div class="login_form">
+        <%=form_tag do %>
+            <%=label_tag 'Username: '%><br>
+            <%=text_field_tag :username%><br>
+            <%=label_tag 'Password: '%><br>
+            <%=password_field_tag :password%><br><br>
+            <%=submit_tag 'Login'%><br><br>
+        <%end%>
+        </div>
+
+        <div class="auth_links">
+        <%=link_to 'Create Account', new_user_path%><br>
+        <%=link_to 'Homepage', welcome_path%>
+        </div>
+
+    </div>
+    <div class = "auth_photo">
+        <img src = "/assets/20190823_091518.jpg", alt = "Jourdan_pic">
+    </div>
+</div>

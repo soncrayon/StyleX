@@ -1,0 +1,51 @@
+
+
+<div class="outfit_show">
+    <p></p>
+</div>
+
+<%# <div class = "outfit_show_page"> %>
+
+    <div class = "outfit_show_header">
+        <h1><%=@outfit.name%></h1>
+
+        
+        <%if session[:user_id] == @outfit.user_id%>
+            <%=link_to "Add Items to Outfit", edit_outfit_path%>
+            <br>
+            <%=button_to "Delete Your Outfit", outfit_path(@outfit), method: :delete%><br>
+           
+        <%end%>
+    </div>
+
+
+    <div class="outfit_show_text">
+
+
+        
+
+        <div class='all_items'>
+            <%@outfit.items.each do |i|%>
+                <div class="item_div">
+                    <div class="image">
+                        <%= image_tag(i.img_url, :alt => "Item Picture") %>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>Name: <%=i.name%></li>
+                            <li>Brand: <%=i.brand%></li>
+                            <li>Category: <%=i.category.name%></li>
+                            <li>Style: <%=i.style.name%></li><br>
+                            <%form_tag outfit_path method: %>
+                        </ul>
+                    </div>
+                </div>
+            <%end%>
+        </div>
+         
+    </div>
+    <br>
+    <%=link_to "View All Outfits", outfits_path%>
+<%# </div> %>
+
+

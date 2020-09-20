@@ -1,0 +1,25 @@
+<div class = "analytics_page">
+    <div class = "analytics_header">
+        <h2>Site Analytics</h2>
+    </div>
+    <div class = "analytics_info">
+        <h3>Categories</h3>
+        <h5>Total Categories: <%=Category.count%></h5>
+        <h5>Category with most items: <%=Category.most_items%></h5>
+        <h5>Category with fewest items: <%=Category.fewest_items%></h5>
+        <br>
+        <h3>Styles</h3>
+        <h5>Total Styles: <%=Style.count%></h5>
+        <h5>Style with most items: <%=Style.most_items%></h5>
+        <h5>Style with fewest items: <%=Style.fewest_items%></h5>
+        <br>
+        <h3>Items</h3>
+        <h5>Total Items: <%=Item.all.count%></h5>
+        <h5>Most popular item: <%=Item.most_popular%></h5>
+        <h5>Least popular item: <%=Item.least_popular%></h5>
+        <h5>Most sought after brand: <%=Item.most_sought_after_brand%></h5>
+        <br>
+        <h3>Users</h3>
+        <h5>User with most outfits: <%=User.most_outfits%></h5>
+    </div>
+</div>

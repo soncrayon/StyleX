@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StyleX</title>
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<div class = "container">
+  <div class="nav">
+
+    <div class="first_40">
+      <div class="home_link">
+        <%= link_to("Home", welcome_path, class: "item") %>
+      </div>
+
+
+      
+      <div class="outfits_link">
+        <%= link_to("Outfits", outfits_path, class: "item") %>
+      </div>
+
+      <div class="items_link">
+        <%= link_to("Items", items_path, class: "item") %>
+      </div>
+
+    </div>
+
+    <div class="second_40">
+        <% if flash[:notice] %>
+        <div class="notice_div">
+          <b><em><%= flash[:notice] %></em></b>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="last_20">
+
+      <div class="profile_link">
+        <%if current_user%>
+        <%= link_to("Profile", user_path(User.find(session[:user_id])), class: "item") %>
+        <%end%>
+      </div>
+      
+      <div class = "login_link">
+        <% if current_user %>
+          <%= link_to("Logout", login_path, method: :delete, class: "item") %>
+        <% else %>
+          <%= link_to("Login", login_path, class: "item") %>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+  <body>
+    <%= yield %>
+  </body>
+</div>
+</html>
