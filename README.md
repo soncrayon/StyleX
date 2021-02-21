@@ -4,7 +4,7 @@
 
 The StyleX web application is meant as an aspirational website presenting a variety of men's clothing.  To use, a visitor should navigate to the '/welcome' page and follow the links from there.  
 
-A user my view current data--outfits and items available to create outfits without being logged in or having an account.  If a user wishes, however, to create their own outfits, they will need to create an account and be logged in.  
+A user may view current data--outfits and items available to create outfits without being logged in or having an account.  If a user wishes, however, to create their own outfits, they will need to create an account and be logged in.  
 
 User accounts (and associated outfits) may be manipulated via CRUD features.  Users may create, add items to, and delete outfits.  Users can also create and delete their own accounts, which will delete all associated outfits.  
 
